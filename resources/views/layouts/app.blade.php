@@ -12,12 +12,13 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    @livewireStyles
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body class="font-sans bg-gray-background text-gray-900 text-sm">
-    <header class="flex items-center justify-between px-8 py-4">
+    <header class="flex flex-col md:flex-row items-center justify-between px-8 py-4">
         <a href="#"><img  class="h-16" src="{{ asset('img/logo.svg') }}" alt="logo"></a>
         <div class="flex items-center">
             @if (Route::has('login'))
@@ -49,7 +50,7 @@
     </header>
     <main class="container mx-auto flex" style="max-width: 1000px">
         <div class="w-70 mr-5">
-            <div class="bg-white border-2 border-blue rounded-xl mt-16"
+            <div class="bg-white sticky top-8 border-2 border-blue rounded-xl mt-16"
             style="
                             border-image-source: linear-gradient(to bottom, rgba(50, 138, 241, 0.22), rgba(99, 123, 255, 0));
                             border-image-slice: 1;
@@ -118,5 +119,6 @@
             </div>
         </div>
     </main>
+    @livewireScripts
 </body>
 </html>

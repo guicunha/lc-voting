@@ -18,16 +18,16 @@
 
             <div class="w-full mx-4">
                 <h4 class="text-xl font-semibold">
-                    <a href="#" class="hove:underline">A random title can go here</a>
+                    <a href="#" class="hove:underline">{{ $idea->title }}</a>
                 </h4>
-                <div class="text-gray-600 mt-3 line-clamp-3">
-                    Mussum Ipsum, cacilds vidis litro abertis. Si u mundo.
+                <div class="text-gray-600 mt-3">
+                    {{$idea->description}}
                 </div>
                 <div class="flex items-center justify-between mt-6">
                     <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
-                        <div class="font-bold text-gray-900">João das Neves</div>
+                        <div class="font-bold text-gray-900">{{$idea->user->name}}</div>
                         <div>&bull;</div>
-                        <div>10 hours ago</div>
+                        <div>{{$idea->created_at->diffForHumans()}}</div>
                         <div>&bull;</div>
                         <div>Category</div>
                         <div>&bull;</div>
